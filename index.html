@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Snake Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🐍 Ultimate Snake Game</h1>
+
+<div class="top-controls">
+    <select id="difficulty">
+        <option value="150">Easy</option>
+        <option value="100">Medium</option>
+        <option value="70">Hard</option>
+    </select>
+
+    <button id="startBtn">Start</button>
+    <button id="pauseBtn">Pause</button>
+    <button id="aiBtn">AI Mode</button>
+    <button id="leaderboardBtn">Leaderboard</button>
+</div>
+
+<div class="stats">
+    <span>Score: <span id="score">0</span></span>
+    <span>Time: <span id="timer">0</span>s</span>
+</div>
+
+<canvas id="gameCanvas" width="400" height="400"></canvas>
+
+<!-- Mobile Controls -->
+<div class="controls">
+    <button onclick="changeDirection('up')">⬆</button>
+    <div>
+        <button onclick="changeDirection('left')">⬅</button>
+        <button onclick="changeDirection('down')">⬇</button>
+        <button onclick="changeDirection('right')">➡</button>
+    </div>
+</div>
+
+<!-- Game Over Modal -->
+<div id="gameOverModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Game Over</h2>
+        <p>Your Score: <span id="finalScore"></span></p>
+        <input type="text" id="playerName" placeholder="Enter your name">
+        <button id="saveScoreBtn">Save Score</button>
+        <button id="exitBtn">Exit</button>
+    </div>
+</div>
+
+<!-- Leaderboard Modal -->
+<div id="leaderboardModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>🏆 Leaderboard</h2>
+        <ul id="leaderboardList"></ul>
+        <button onclick="closeLeaderboard()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
