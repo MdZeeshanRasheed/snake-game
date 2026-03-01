@@ -6,13 +6,6 @@ This project demonstrates strong front-end development skills including game log
 
 ---
 
-## 🚀 Live Demo
-
-👉 Add your GitHub Pages link here  
-Example: https://yourusername.github.io/snake-game/
-
----
-
 ## 🎮 Features
 
 - 🎯 Classic Snake gameplay
